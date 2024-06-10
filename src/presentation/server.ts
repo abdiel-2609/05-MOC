@@ -20,7 +20,7 @@ export class Server{
             fileSystemLogRepository
         );
         emailService.sendEmailWithFileSystemLogs(
-            ['abdiel.alvarado@wabtec.com', 'abdiel.alvaradoat@uanl.edu.mx']
+            [', '']
         ); */
         
         /* CronService.creatJon(
