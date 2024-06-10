@@ -1,5 +1,6 @@
 import { envs } from "../config/plugins/envs.plugin";
 import { CheckService } from "../domain/use-cases/checks/check-service";
+import { SendEmailLogs } from "../domain/use-cases/email/send-email-logs";
 import { FileSystemDataSource } from "../infrastructure/datasources/file-system.datasource";
 import { LogRepositoryImpl } from "../infrastructure/repositories/log.repository.impl";
 import { CronService } from "./cron/cron-service";
@@ -7,22 +8,24 @@ import { EmailService } from "./email/email.service";
 
 const fileSystemLogRepository = new LogRepositoryImpl(
     new FileSystemDataSource(),
-)
-
+);
+const emailService = new EmailService();
 
 export class Server{
     public static start(){
         console.log('Server started...');
 
         //Mandar emailf
-        //console.log(envs.MAILER_SECRET_KEY, envs.MAILER_EMAIL);
-        /* const emailService = new EmailService(
+        
+       /*  new SendEmailLogs(
+            emailService,
             fileSystemLogRepository
-        );
-        emailService.sendEmailWithFileSystemLogs(
-            [', '']
+        ).execute(['abdiel.alvarado@wabtec.com', 'abdiel.alvaradoat@uanl.edu.mx']); */
+        /* emailService.sendEmailWithFileSystemLogs(
+            ['', '']
         ); */
         
+
         /* CronService.creatJon(
         '* /5 * * * * *',
         () => {
