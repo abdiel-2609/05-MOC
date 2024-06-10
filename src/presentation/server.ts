@@ -14,14 +14,14 @@ export class Server{
     public static start(){
         console.log('Server started...');
 
-        //Mandar email
-
-        const emailService = new EmailService();
-        emailService.sendEmail({
-            to: "abdiel.alvarado@wabtec.com",
-            subject: "Logs de sistema",
-            htmlBody: 'Hola Mundo'
-        })
+        //Mandar emailf
+        //console.log(envs.MAILER_SECRET_KEY, envs.MAILER_EMAIL);
+        /* const emailService = new EmailService(
+            fileSystemLogRepository
+        );
+        emailService.sendEmailWithFileSystemLogs(
+            ['abdiel.alvarado@wabtec.com', 'abdiel.alvaradoat@uanl.edu.mx']
+        ); */
         
         /* CronService.creatJon(
         '* /5 * * * * *',
