@@ -20,7 +20,7 @@ export class Server{
        /*  new SendEmailLogs(
             emailService,
             fileSystemLogRepository
-        ).execute(['abdiel.alvarado@wabtec.com', 'abdiel.alvaradoat@uanl.edu.mx']); */
+        ).execute(['']); */
         /* emailService.sendEmailWithFileSystemLogs(
             ['', '']
         ); */
